@@ -21,7 +21,7 @@
       <a class="logo-snap" href="#"><img src="images/logo.svg" alt="Logo snap"></a>
 
       <nav>
-        <ul class="nav-menu">
+        <ul class="nav-menu menu-desktop">
           <li class="nav-features"><a href="#">Features <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg></a></li>
           <li class="nav-company"><a href="#">Company <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg></a></li>
           <li class="nav-careers"><a href="#">Careers</a></li>
@@ -30,15 +30,20 @@
       </nav>
     </div>
 
-    <div class="nav-user">
+    <div class="nav-user menu-desktop">
       <a class="login" href="#">Login</a>
       <a class="register" href="#">Register</a>
     </div>
+
+    <div class="menu-mobile">
+      <a href="#"><img src="images/icon-menu.svg" alt=""></a>
+    </div>
+
   </header>
 
   <main>
     <div class="main-conteudo">
-      <h1>Make<br>remote work</h1>
+      <h1>Make remote work</h1>
       <p>Get your team in sync, no matter your location. Streamline processes, 
         create team rituals, and watch productivity soar.</p>
       <button class="conteudo-botao">Learn more</button>
@@ -52,7 +57,10 @@
     </div>
 
     <div class="main-img">
-      <img src="images/image-hero-desktop.png" alt="Imagem hero">
+      <picture>
+        <source media="(max-width: 1064px )" srcset="images/image-hero-mobile.png">
+        <img src="images/image-hero-desktop.png" alt="Imagem hero">
+      </picture>
     </div>
   </main>
   

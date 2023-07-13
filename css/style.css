@@ -5,7 +5,7 @@ body {
     font-family: "Epilogue", sans-serif;
     font-weight: 500;
     color: hsl(0, 0%, 41%);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 * {
@@ -87,6 +87,10 @@ header a {
     border-color: hsl(0, 0%, 8%);
 }
 
+.menu-mobile {
+    display: none;
+}
+
 /* Main */
 
 main {
@@ -96,19 +100,19 @@ main {
     gap: 40px;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px 60px;
+    padding: 20px 60px 0 60px;
     max-width: 1360px;
 }
 
 .main-conteudo h1 {
     font-size: 5rem;
     color: hsl(0, 0%, 8%);
-    margin-bottom: 48px;
+    margin-bottom: 48px;   
 }
 
 .main-conteudo p {
     line-height: 1.45rem;
-    width: 46ch;
+    max-width: 46ch;
     margin-bottom: 36px;
 }
 
@@ -122,22 +126,76 @@ main {
     margin-bottom: 120px;
     border: 2px solid hsl(0, 0%, 8%);
     border-radius: 12px;
-    transition: 0.3s;
 }
 
 .conteudo-botao:hover {
     color: hsl(0, 0%, 8%);
     background: hsl(0, 0%, 98%);
-    padding: 16px 20px;
-    margin-bottom: 120px;
 }
 
 .main-clients {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 20px;
 }
 
 .main-img {
     max-width: 460px;
+}
+
+@media (max-width: 1064px) {
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 20px 60px;
+    }
+
+    .main-conteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .conteudo-botao {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 764px) {
+    .menu-desktop {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .main-conteudo h1 {
+        font-size: 3rem;  
+    }
+}
+
+@media (max-width: 464px) {
+    main {
+        padding: 0 20px 20px 20px;
+    }
+
+    .main-img {
+        width: 100vw;
+    }
+
+    .main-conteudo h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .main-conteudo p {
+        margin-bottom: 20px;
+    }
+
+    .conteudo-botao {
+        margin-bottom: 36px;
+    }
 }
